@@ -1,0 +1,89 @@
+.hero {
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    min-height: 90dvh;
+    color: var(--text-color);
+    text-align: center;
+    background-image: linear-gradient(var(--color-sec) 10%, #0009, #0003), url("../imgs/hero-bg-small.webp");
+    background-position: center;
+    background-size: cover;
+    overflow: clip;
+    position: relative;
+}
+
+.hero::after{ 
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw; 
+    background-size: 100% 87px;
+    background-position: 50% 100%;  background-image: url('../icons/rect-shape.svg'); 
+}
+
+.hero-firm {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hero-slogan {
+    font-size: 3rem;
+}
+
+.hero-slogan__2nd {
+    display: block;
+}
+
+.hero__text {
+    max-width: 30rem;
+}
+
+.hero__button {
+    margin: auto;
+    background-color: var(--color-main);
+}
+
+.hero .contact-info {
+    display: flex;
+    gap: 4rem;
+}
+
+.contact-item {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hero .contact-item__link:hover {
+    transform: scale(1.1);
+}
+
+.hero .contact-item__link {
+    width: 1.2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        background-image: linear-gradient(225deg, var(--color-sec) 10%, #0009, #0003), url("../imgs/hero-bg-small.webp");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero__button {
+        margin: 0;
+        margin-right: auto;
+    }
+
+    .hero .contact-info {
+        flex-direction: column;
+    }
+}

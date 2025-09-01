@@ -1,0 +1,76 @@
+.footer {
+    background: var(--color-dark);
+    color: #fff;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.footer-part {
+    flex: 1 0 min(6rem, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-info__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footer-info__title {
+    color: var(--color-main);
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.footer .nav-list__link {
+    display: block;
+    padding: 0.3rem 0;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.footer-firm {
+    flex: 1 0 min(6rem, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-slogan {
+    font-size: 1rem;
+}
+
+.footer-firm__head {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-firm__logo {
+    width: 4rem;
+}
+
+.footer-rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-rights__copyrights {
+    text-transform: uppercase;
+}
+
+.footer-rights__credits a {
+    text-decoration: underline;
+}

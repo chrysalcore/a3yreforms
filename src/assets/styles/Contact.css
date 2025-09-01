@@ -1,0 +1,121 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: var(--text-color);
+    background-color: var(--color-sec);
+}
+
+.contact .section-header {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-text {
+    flex: 1 0 min(15rem, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-list__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-list__img {
+    padding: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #14243A66;
+    border-radius: 0.3rem;
+}
+
+.contact-list__title {
+    color: var(--color-main);
+    font-size: 1rem;
+}
+
+.contact-list__text {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.contact .form {
+    flex: 1 0 min(15rem, 100%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #14243A33;
+    border-radius: 0.5rem;
+}
+
+.contact .form-field {
+    flex: 1 0 min(10rem, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact .form-field__text {
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.contact .form-field__input {
+    padding: 0.7rem 1rem;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: #14243A55;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.contact .form-field__input::placeholder {
+    color: #aaa;
+    transition: transform 0.2s;
+}
+
+.contact .form-field__input:focus-visible {
+    outline: none;
+}
+
+.contact .form-field__input:focus-visible::placeholder {
+    transform: translateX(10px);
+}
+
+.contact .form-field:last-child .form-field__input {
+    flex: 1 0 100%;
+    resize: none;
+    overflow-y: auto;
+    overflow-x: clip;
+}
+
+.contact .form__btn {
+    flex: 1 0 100%;
+    margin: auto;
+    color: var(--color-dark);
+    background-color: var(--color-main);
+    transition: box-shadow .3s, transform .3s;
+    animation: fade-in-bottom ease both;
+    animation-timeline: view();
+    animation-range-end: contain 60%;
+}
+
+.contact .form__button:hover {
+    box-shadow: 0 0 1rem #1118;
+    transform: translateY(-5px);
+}
