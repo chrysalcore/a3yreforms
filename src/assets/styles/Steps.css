@@ -7,42 +7,44 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.steps-list__item {
-    flex: 0 0 min(15rem, 100%);
+.step {
+    flex: 1 0 min(15rem, 100%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     gap: 1rem;
     padding: 1rem;
+    max-width: 20rem;
     background: linear-gradient(to right, #14243Aaa, #14243A66);
     border-radius: 0.5rem;
+    transform: translateY(4rem);
+    opacity: 0;
 }
 
-.steps-list__img {
+.step__img { 
     width: 2.5rem;
     height: 2.5rem;
 }
 
-.steps-list__text {
+.step__text {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     width:90%;
 }
 
-.steps-list__title {
+.step__title {
     font-size: 1rem;
 }
 
-.steps-list__title::first-letter {
+.step__title::first-letter {
     color: var(--color-main);
     font-size: 1.2rem;
 }
 
-.steps-list__desc {
+.step__desc {
     color: #ddd;
     font-size: 0.9rem;
 }

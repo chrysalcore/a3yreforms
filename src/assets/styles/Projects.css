@@ -1,10 +1,10 @@
-.projects {
-    padding: 4rem 0;
-    color: var(--color-dark);
+.projects:nth-child(odd) {
+    padding: 10rem 0;
+    color: var(--color-sec);
     text-align: center;
     background-color: var(--text-color);
     overflow-x: clip;
-}
+} 
 
 .projects-list {
     display: flex;
@@ -16,9 +16,11 @@
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     position: relative;
+    transform: translateY(4rem);
+    opacity: 0;
 }
 
-.projects-list__item {
+.project {
     flex: 1 0 min(22rem, 85vw);
     display: flex;
     flex-direction: column;
@@ -33,58 +35,34 @@
     transition: transform 0.3s, background 0.3s;
 }
 
-.projects-list__item:nth-child(1) {
-    background: linear-gradient(to bottom, #0004 30%, #14243A), url("../imgs/bathroom.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-.projects-list__item:nth-child(2) {
-    background: linear-gradient(to bottom, #0004 30%, #14243A), url("../imgs/kitchen.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-.projects-list__item:nth-child(1):hover {
-    background: linear-gradient(to bottom, #0002 70%, #14243A), url("../imgs/bathroom.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-.projects-list__item:nth-child(2):hover {
-    background: linear-gradient(to bottom, #0002 70%, #14243A), url("../imgs/kitchen.webp");
-    background-position: center;
-    background-size: cover;
-}
-
-.projects-list__title {
+.project__title {
     color: var(--color-main);
-    /* letter-spacing: 0.1rem; */
     transition: transform 0.3s;
 }
 
-.projects-list__item:hover  .projects-list__title {
+.project:hover .project__title {
     transform: translateY(5rem);
 }
 
-.projects-list-sublist {
+.project-list {
     display: flex;
     flex-direction: column;
-    text-align: left;
     gap: 0.4rem;
+    list-style: disc;
+    text-align: left;
     transition: opacity .3s, transform .3s;
 }
 
-.projects-list__item:hover .projects-list-sublist {
+.project:hover .project-list {
     opacity: 0;
     transform: translateY(5rem);
 }
 
-.projects-list-sublist__item::marker {
+.project-list__item::marker {
     color: var(--color-main);
 }
 
-.projects-list-sublist__item {
+.project-list__item {
     color: #eee;
     font-size: 0.9rem;
 }

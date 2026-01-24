@@ -1,32 +1,17 @@
 .header {
-    position: sticky;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    max-width: 100dvw;
+    width: 100dvw;
     color: var(--text-color);
     background-color: var(--color-sec);
-    box-shadow: 0 2px 0.5rem #0004;
     top: 0;
-    z-index: 100;
-    overflow: unset;
+    z-index: 100; 
 }
 
-.header-firm {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header__logo {
-    width: 1.5rem;
-}
-
-.header__title {
-    display: none;
-    font-size: 1rem;
-    color: var(--color-main);
-    font-weight: 400;
+.header .logo { 
+    width: 1.5rem; 
 }
 
 .header .nav {
@@ -45,13 +30,9 @@
 }
 
 .header .nav-list__link {
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.header__btn {
-    margin: 0;
-    background-color: var(--color-main);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 @media screen and (min-width: 600px) {

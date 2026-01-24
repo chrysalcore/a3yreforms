@@ -1,5 +1,4 @@
-import ContactInfo from './ContactInfo'
-import '../assets/styles/LocalBanner.css'
+import '../../assets/styles/LocalBanner.css'
 
 function LocalBanner() {
     const data = [
@@ -19,9 +18,9 @@ function LocalBanner() {
         <ul className='local-banner'>
             {data.map(item => {
                 return (
-                    <li className='local-banner__item'>
+                    <li className='local-banner__item' key={item.name}>
                         <a className='local-banner__link' href={item.href} target="_blank" rel="noopener noreferrer">
-                            <h3 className='local-banner__title'>{item.name}</h3>
+                            <h2 className='local-banner__title'>{item.name}</h2>
                             <p className='local-banner__text'>{item.text}</p>
                         </a>
                     </li>
